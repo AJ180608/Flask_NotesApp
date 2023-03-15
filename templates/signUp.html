@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %} Sign up {% endblock %}
+
+{% block body %}
+<h2 class="mx-3 my-3">Sign Up</h2>
+
+<div class="mx-auto">
+  <h4 class="text-danger mx-3">{{ error }}</h4>
+</div>
+
+<form method="post" class="mx-3 my-3">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" id="password">
+  </div>
+  <div class="mb-3">
+    <label for="confirm" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" name="confirm_password" id="confirm">
+  </div>
+  <button type="submit" class="btn btn-primary">Create Account</button>
+</form>
+{% endblock %}

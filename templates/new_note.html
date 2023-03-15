@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} New Note {% endblock %}
+
+{% block body %}
+<h2 class="m-2 text-danger"> {{ error }}</h2>
+
+<form class="mx-3 my-3" method="post">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Note Title</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="title">
+    </div>
+    <div class="form-group mt-2">
+      <label for="exampleFormControlTextarea1">Note Content</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" name="content" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary my-3">Create Note</button>
+  </form>
+
+{% endblock %}
